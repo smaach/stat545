@@ -110,3 +110,53 @@ x <- list(5, 'apple', list(5,10))
 x[[3]]
 typeof(x[[3]][[1]])
 
+y <- matrix(1:25, 5, 5)
+rownames(y) <- c('A','B','C','D','E')
+colnames(y) <- c('1','2','3','4','5')
+y
+
+mat <- matrix(1:100, 10, 10)
+mat
+rownames(mat) <- list(c(1:11))
+colnames(mat) <- list(c(1:11))
+mat
+
+mat1 <- matrix(5, 10, 10)
+mat1
+mat2 <- diag(13, 3, 3)
+mat2
+mat3 <- diag(1, 3, 3)
+mat3
+mat4 <- matrix(1:15, 5, 3, TRUE)
+mat4
+mat4[2,3]
+mat4[1:1, 2:3]
+
+x<-c(3,0,-23,5,7)
+y<-c(199,4,0,-2,5)
+rbind(x,y)
+cbind(x,y)
+?array
+
+array(1:30, dim = c(2,3,4), dimnames = list(c('A','B'),c('p','q','r'),
+                                            c('Tulip', 'Lily', 'Jasmine', 'Rose')))
+colours <- factor(c('Yello', 'Yello', 'Red', 'Green'))
+colours
+nlevel(colours)
+heights <- gl(3,4,labels = c('short', 'medium','large'))
+heights
+nlevels(heights)
+
+emp <- data.frame(id = 1:3, 
+                  names=c('Meet', 'Ram', 'Bhut'),
+                  sal = list(500,1000,5000))
+emp
+
+
+#DOUBTS
+# 1) I want to create a 1:100 matrix. How would I give the rownames
+#    and colnames without writing 1 to 100 numbers individually
+# 2) On passing -> data.frame(id = 1:3, 
+                   #names=c('Meet', 'Ram', 'Bhut'),
+                  #sal = list(500,1000,5000))
+#    the output is really weird.
