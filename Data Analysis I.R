@@ -75,3 +75,38 @@ filter(gapminder, between(lifeExp, 29, 40))
 filter(gapminder, lifeExp < 29 & lifeExp > 40)
 filter(gapminder, country == 'Rwanda', year > 1979)
 filter(gapminder, country %in% c('Rwanda', 'Afghanistan'))
+
+#-----------------------------------------------------------#
+
+#learning dplyr from the internet (yt video)
+
+library(dplyr)
+install.packages('nycflight13')
+library(nycflights13)
+??nycflights13
+class(nycflights13::planes)
+class(nycflights13::planes$engines)
+nycflights13::flights
+names(nycflights13::flights)
+df <- select(nycflights13::flights, year, month, day, flight)
+a <- list(4, 'agnb', Inf)
+a[3]
+?dplyr
+browseVignettes(package = 'dplyr')
+typeof(-5)
+typeof(-Inf)
+
+a <- c(5, 'meet', Inf)
+typeof(a)
+b <- list(5, NaN, Inf, 'blahblah')
+typeof(b)
+b[1]
+b[4]
+typeof(b[4])
+str(b)
+tpyeof(NaN)
+typeof(NaN)
+x <- list(5, 'apple', list(5,10))
+x[[3]]
+typeof(x[[3]][[1]])
+
